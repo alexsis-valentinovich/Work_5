@@ -13,6 +13,7 @@ namespace Part_6
         static void Main(string[] args)
         {
             Console.WriteLine("Введите размер массива");
+            
             int n = Convert.ToInt32(Console.ReadLine());
             int[,] array = new int[n, n];   // массив чисел пользователя
             int[] arrayStroki = new int[n]; // массив суммы строк
@@ -21,13 +22,15 @@ namespace Part_6
             int DiagR = 0;                  // суммы второй диагонали
             int i;
             bool f = true;
-            Console.WriteLine("Введите элемент массива"); // заполнение массива чисел пользователя
+            Console.WriteLine("Введите элементы массива"); // заполнение массива чисел пользователя
             for (i = 0; i < n; i++)
             {
                 for (int j = 0; j < n; j++)
                 {
                     int m = Convert.ToInt32(Console.ReadLine());
                     array[j, i] = m;
+                    if ((i == n - 1) && (j == n - 2))
+                        Console.WriteLine("Последний элемент");
                 }
             }                                            // заполнение массива чисел пользователя
             for (i = 0; i < n; i++)
@@ -57,6 +60,7 @@ namespace Part_6
                 Console.Write("  Сумма = {0,3} ", arrayStroki[i]);
             }                    // печать суммы строк
             Console.WriteLine(); // печать суммы столбцов
+            Console.WriteLine();
             for (i = 0; i < n; i++)
             {
                 if (i == 0)
@@ -68,6 +72,7 @@ namespace Part_6
                     Console.Write("  {0,3} ", arrayStolb[i]);
                 }
             }                   // печать суммы столбцов
+            Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine("  Сумма диаг левая = {0}", DiagL);  // печать суммы диагоналей
             Console.WriteLine("  Сумма диаг правая = {0}", DiagR);  // печать суммы диагоналей

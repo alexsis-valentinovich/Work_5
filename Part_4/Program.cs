@@ -28,7 +28,6 @@ namespace Part_4
             {
                 if (i % 2 == 0)
                 {
-                    k++;
                     Console.WriteLine("{0}. {1}", i, array[i]);
                 }
             }
@@ -38,7 +37,6 @@ namespace Part_4
             {
                 if ((i % 2 == 0) && (array[i] % 2 != 0))
                 {
-                    k++;
                     Console.WriteLine("{0}. {1}", i, array[i]);
                 }
             }
@@ -52,6 +50,7 @@ namespace Part_4
                         Console.WriteLine("{0}. {1}", i, array[i]);
                 }
             }
+            Console.WriteLine("Кол-во элементов = {0}", k);
             Console.ReadKey();
         }
     }
